@@ -14,20 +14,71 @@ class Paises{
       void Insertar(const Pais &P);
       void Borrar(const Pais &P);
       
-      class const_iterator;
 	class iterator{
 	private:
 	    set<Pais>::iterator p;
 	public:
-	    //declaraciones    
+	    //declaraciones
+	    iterator (){}   
+	    iterator & operator ++(){
+	    	++p;
+	    	return *this;
+	    
+	    }
+	    
+	    iterator & operator --(){
+	    	--p;
+	    	return *this;
+	    }
+	    
+	    set<Pais> &operator *(){
+	    	return *p;
+	    
+	    }
+	    
+	    bool operator == (const iterator &i)const {
+	    	return i.p == p;
+	    
+	    
+	    }
+	    bool operator != (const iterator &i)const {
+	    	return i.p != p;
+	 
+	    }
+	    
 	    friend class Paises;
-	    friend class const_iterator;
 	};    
 	class const_iterator{
 	private:
 	    set<Pais>::const_iterator p;
 	public:
 	    //declaraciones
+	    const_iterator (){}  
+	    const_iterator & operator ++(){
+	    	++p;
+	    	return *this;
+	    
+	    }
+	    
+	    const_iterator & operator --(){
+	    	--p;
+	    	return *this;
+	    }
+	    
+	    const set<Pais> &operator *(){
+	    	return *p;
+	    
+	    }
+	    
+	    bool operator == (const const_iterator &i)const {
+	    	return i.p == p;
+	    
+	    
+	    }
+	    bool operator != (const const_iterator &i)const {
+	    	return i.p != p;
+	 
+	    }
 	    friend class Paises;
 	   
 	};

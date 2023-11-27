@@ -2,61 +2,56 @@
 using namespace std;
 
   
-      Paises::Paises(){}
+      Paises::Paises(){
+      	set<Pais> datos = set<Pais>();
+      }
       void Paises::Insertar(const Pais &P){
-	  ................
+	  datos.insert(P);
       }
       void Paises::Borrar(const Pais &P){
-	  ................
+	  datos.erase(P);
       }
       
-      class const_iterator;
-	class iterator{
-	private:
-	    set<Pais>::iterator p;
-	public:
-	    ............
-           ..............
-	  .............
-.	    .........    
-	    friend class Paises;
-	    friend class const_iterator;
-	};    
-	class const_iterator{
-	private:
-	    set<Pais>::const_iterator p;
-	public:
-	    ..........
-            ...........
-	    friend class Paises;
-	   
-	};
-	Paises::iterator Paises::begin(){
+      iterator Paises::begin(){
 	  iterator it;
 	  it.p = datos.begin();
 	  return it;
 	}  
-	
-	Paises::const_iterator Paises::begin()const{
-	  ...........
+       const_iterator Paises::begin()const{
+	  const_iterator it;
+	  it.p = datos.begin();
+	  return it;
 	}
-	Paises::iterator Paises::end(){
+       iterator Paises::end(){
 	  iterator it;
 	  it.p = datos.end();
 	  return it;
 	}
-	Paises::const_iterator Paises::end()const{
-	  ...........
+	
+	const_iterator Paises::end()const{
+	  const_iterator it;
+	  it.p = datos.end();
+	  return it;
 	}
-	Paises::iterator Paises::find(const Pais &p){
+	iterator Paises::find(const Pais &p){
 	    iterator it;
 	    set<Pais>::iterator i;
 	    for (i=datos.begin(); i!=datos.end() && !((*i)==p);++i);
 	    it.p=i;
 	    return it;
 	}
-	Paises::iterator Paises::find(const Punto &p){
-	    .............
+	iterator Paises::find(const Punto &p){
+	    iterator it;
+	    set<Pais>::iterator i;
+	    for (i = datos.begin(); i != datos.end(); ++i){
+	    	if (*i == p){
+	    		it.p = i;
+	    		return it;
+	    	}
+	    
+	    }
+	    return it;
+	    
 	}
 	
 	istream & operator>>(istream & is, Paises & R){
