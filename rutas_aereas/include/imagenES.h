@@ -35,6 +35,29 @@ enum TipoImagen {IMG_DESCONOCIDO, ///< Tipo de imagen desconocido
   */
 TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas);
 
+/** 
+ * @brief Obtiene una nueva imagen que es la versión rotada de una imagen de entrada
+ * @param Io: imagen de entrada
+ * @param angulo: angulo a rotar la imagen de entrada. Debe estar en radianes.
+ * @return Una nueva imagen que es la versión rotada de Io.
+ * */
+
+Imagen Rota(const Imagen & Io,double angulo);
+
+/** 
+ * @brief Pinta una imagen
+ * @param f1: Limite inferior de la fila
+ * @param f2: Limite superior de la fila
+ * @param c1: Limite inferior de la columna
+ * @param c2: Limite superior de la columna
+ * @param I: La imagen donde se va a pintar
+ * @param avion: EL avion que se va a pintar en la imagen
+ * @param mindisf: El minimo de las filas
+ * @param mindisc: El minimo de las columnas
+ * */
+
+void Pintar( int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mindisf,int mindisc);
+
 /**
   * @brief Lee una imagen de tipo PPM sobre memoria reservada
   *
