@@ -26,10 +26,34 @@ using namespace std;
 			longitud = l;
 		}
 		bool Punto::operator < (const Punto &p)const{
+			bool menor = false;
+			
+			if (latitud != p.GetLatitud()){
+				if (latitud < p.GetLatitud()){
+					menor = true;
 				
+				}
+				
+			
+			}else{//en el caso de que las latitudes iguales vamos con las longitudes
+			
+				if (longitud < p.GetLatitud()){
+					menor = true;
+				
+				}
+			
+			}
+			
+			return menor;
+			
+			
 		
 		}
-		bool Punto::operator == (const Punto &p)const;
+		bool Punto::operator == (const Punto &p)const{
+			return ((latitud == p.GetLatitud()) &&
+			        (longitud == p.GetLongitud));
+		
+		}
 		istream &operator >>(istream &is, Punto &p); 
 		ostream &operator <<(ostream &is, const Punto &p);
 		
