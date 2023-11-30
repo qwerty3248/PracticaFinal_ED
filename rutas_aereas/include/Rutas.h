@@ -17,7 +17,7 @@ class Ruta{
 		void Insertar(const Punto &n);
 		void Borrar(const Punto &n);
 		string GetCode()const;
-		void SetCode(const string &code);
+		void SetCode(const string &codes);
 		bool operator ==(const Ruta &R)const;
 		bool operator <(const Ruta &R)const;
 		

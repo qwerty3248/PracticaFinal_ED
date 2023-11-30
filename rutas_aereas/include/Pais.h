@@ -21,6 +21,11 @@ class Pais{
 		Punto GetPunto()const;
 		string GetPais()const;
 		string GetBandera()const;
+		//hemos añadido estos set
+		void SetPunto(const Punto P); 
+		void SetPais(const string Pais);
+		void SetBandera(const string Bandera);
+		//hemos añadido estos set
 		bool operator <(const Pais &P)const;
 		bool operator ==(const Pais &P)const;
 		bool operator ==(const Punto &P)const;

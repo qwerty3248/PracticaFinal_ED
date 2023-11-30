@@ -39,7 +39,20 @@ const_iterator Almacen_Rutas::end()const{
 	it = rutas.end();
 	return it;
 }
-istream & operator >>(istream & is,Almacen_Rutas &AR);
+istream & operator >>(istream & is,Almacen_Rutas &AR){
+	//preguntarle a carlos       
+	      Ruta aux;
+	      //leemos el comentario
+	      if (is.peek()=='#'){
+		string a;
+		getline(is,a);
+	      }
+	      while (is>>aux){
+	      	AR.rutas.insert(aux);
+	      }
+	      
+
+}
 ostream & operator <<(ostream & os, Almacen_Rutas &R);
 
 

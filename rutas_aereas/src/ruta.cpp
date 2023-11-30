@@ -12,21 +12,30 @@ void Ruta::Insertar(const Punto &n){
 
 }
 void Ruta::Borrar(const Punto &n){
-	puntos.pop_back(n);
+	auto it = puntos.begin();
+	
+	while (it != puntos.end()){
+		if (*it == n){
+			puntos.erase(it);
+		}else{
+			++it;
+		
+		}
+	}
 
 }
 string Ruta::GetCode()const{
 	return code;
 }
-void Ruta::SetCode(const string &code){
-	code = code;
+void Ruta::SetCode(const string &codes){
+	code = codes;
 }
 bool Ruta::operator ==(const Ruta &R)const{
-	return (strcmp(R.GetCode(),GetCode())==0) && (*this.puntos == R.puntos);
+	return ((strcmp(R.GetCode(),GetCode())==0) && (puntos == R.puntos));
 
 }
 bool Ruta::operator <(const Ruta &R)const{
-	//la verdad que ni idea jefe
+	//la verdad que ni idea, hay que preguntarselo
 
 }
 iterator Ruta::begin(){
@@ -61,10 +70,25 @@ iterator Ruta::find(const Punto &p){
 	return it;
 }
 istream & operator>>(istream &is, Ruta &R){
-	//hay que implementarlo	
+	string paraules;
+	is>>paraules;
+	R.SetCode(paraules);
+	is>>paraules;//saltamos el numero.
+	Punto aux;
+	while (is>>aux){
+		R.Insertar(aux);	
+	}
+	return is;
 }
 ostream & operator<<(ostream &os, const Ruta &R){
-	//hay que implementarlo
+	os<<R.GetCode()<<"  "<<R.puntos.size()<<"  ";
+	int tam = R.puntos.size();
+	iterator it = R.begin();
+	while(it != R.end()){
+		os<<*it;
+		++it;
+	}
+	return os;
 }
 
 

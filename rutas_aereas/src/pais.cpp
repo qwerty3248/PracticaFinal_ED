@@ -1,4 +1,4 @@
-#include <isotream>
+#include <iostream>
 #include "Pais.h"
 #include <string>
 #include <cstring>
@@ -21,6 +21,17 @@ string Pais::GetBandera()const{
 	return bandera;
 
 }
+void SetPunto(const Punto P){
+	p.SetLatitud(P.GetLatitud());
+	p.SetLongitud(P.GetLongitud());
+} 
+void SetPais(const string Pais){
+	pais = Pais;
+}
+void SetBandera(const string Bandera){
+	bandera = Bandera;
+}
+
 bool Pais::operator <(const Pais &P)const{
 	return (p < P.GetPunto());
 
@@ -32,8 +43,28 @@ bool Pais::operator ==(const Punto &P)const{
 	return (p == P);
 
 }
-istream & operator >>(istream & is, Pais &p){}
-ostream & operator <<(ostream & os, const Pais &P){}
+istream & operator >>(istream & is, Pais &p){
+	Punto aux;
+	is>>aux;
+	p.SetPunto(aux);
+	string palabra1;
+	is>>palabra1;
+	string palabra2;
+	is>>palabra2;
+	p.SetBandera(palabra2);
+	p.SetPais(palabra1);
+	return is;
+
+}
+ostream & operator <<(ostream & os, const Pais &P){
+	os<<P.GetPunto();
+	os<<"   ";
+	os<<P.GetPais();
+	os<<"   ";
+	os<<P.GetBandera();
+	return os;
+	
+}
 
 
 

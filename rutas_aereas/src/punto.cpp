@@ -1,5 +1,7 @@
 #include "Punto.h"
 #include <iostream>
+#include <cstring>
+#include <string>
 using namespace std;		
 		
 		Punto::Punto(){
@@ -54,8 +56,24 @@ using namespace std;
 			        (longitud == p.GetLongitud));
 		
 		}
-		istream &operator >>(istream &is, Punto &p); 
-		ostream &operator <<(ostream &is, const Punto &p);
+		istream &operator >>(istream &is, Punto &p){
+			string palabra1;
+			is>>palabra1;
+			p.SetLatitud(stod(palabra1));
+			string palabra2;
+			is>>palabra2;
+			p.SetLongitud(stod(palabra2));
+			return is;
+		
+		}
+		ostream &operator <<(ostream &os, const Punto &p){
+			
+			os<<p.GetLatitud();
+			os<<"   ";
+			os<<p.GetLongitud();
+		
+			return os;
+		}
 		
 		
 		
