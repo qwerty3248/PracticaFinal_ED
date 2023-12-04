@@ -45,7 +45,11 @@ bool Pais::operator ==(const Punto &P)const{
 }
 istream & operator >>(istream & is, Pais &p){
 	Punto aux;
-	is>>aux;
+	string pala1="",pala="";
+	is>>pala1;
+	is>>pala;
+	aux.SetLatitud(stod(pala1));
+	aux.SetLongitud(stod(pala));
 	p.SetPunto(aux);
 	string palabra1;
 	is>>palabra1;

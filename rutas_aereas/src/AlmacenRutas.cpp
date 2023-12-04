@@ -1,6 +1,7 @@
 
 #include <iostream>
 #include "AlmacenRutas.h"
+#include <pair>
 using namespace std;
 
 //dhacer los metodos
@@ -16,9 +17,9 @@ void Almacen_Rutas::Borrar(const Ruta &R){
 	rutas.erase(R);
 }
 Ruta Almacen_Rutas::GetRuta(const string &a){
-	Ruta aux = rutas.find(a);
+	Ruta aux = *(rutas.find(a));
 	return aux;
-}//ni idea si está bien
+}
 iterator Almacen_Rutas::begin(){
 	iterator it;
 	it = rutas.begin();
@@ -40,20 +41,36 @@ const_iterator Almacen_Rutas::end()const{
 	return it;
 }
 istream & operator >>(istream & is,Almacen_Rutas &AR){
-	//preguntarle a carlos       
-	      Ruta aux;
+	      
 	      //leemos el comentario
 	      if (is.peek()=='#'){
 		string a;
 		getline(is,a);
 	      }
-	      while (is>>aux){
-	      	AR.rutas.insert(aux);
+	      
+	      while (!is.eof()){
+	        Ruta aux;
+	        is>>aux;
+	        string codigo= aux.GetCode();
+	        pair<string,Ruta> myPair;
+	        myPair.first = codigo;
+	        myPair.second = aux;
+	      	AR.rutas.insert(myPair);
 	      }
 	      
 
 }
-ostream & operator <<(ostream & os, Almacen_Rutas &R);
+ostream & operator <<(ostream & os, Almacen_Rutas &R){
+	 
+	//int tam = R.rutas.size();
+	const_iterator it = R.begin();
+	while (it != R.end()){
+		os<<it->second<<"\n";
+		++it;
+	}
+	
+	return os;
+}
 
 
 

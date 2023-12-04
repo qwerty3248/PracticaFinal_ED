@@ -10,7 +10,7 @@ class Punto{
 
 	public:
 		Punto();
-		Punto(double l, double L, const string & d);
+		Punto(double l, double L);
 		double GetLatitud()const;
 		double GetLongitud()const;
 		void SetLatitud(double l);

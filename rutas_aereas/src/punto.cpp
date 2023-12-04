@@ -9,7 +9,7 @@ using namespace std;
 		}
 		
 		
-		Punto::Punto(double l, double L, const string & d){
+		Punto::Punto(double l, double L){
 			latitud=l;
 			longitud=L;
 		}
@@ -57,11 +57,22 @@ using namespace std;
 		
 		}
 		istream &operator >>(istream &is, Punto &p){
-			string palabra1;
-			is>>palabra1;
-			p.SetLatitud(stod(palabra1));
-			string palabra2;
-			is>>palabra2;
+			char c = is.get();//(
+			string palabra = "";
+			c = is.get();
+			//en c la primera letra
+			while (c != ','){
+				palabra.push_back(c);
+				c=is.get();
+			}
+			string palabra2 = "";
+			c=is.get();//saltamos la ,
+			while(c != ')'){
+				palabra2.push_back(c);
+				c=is.get();
+			}
+			//c = )
+			p.SetLatitud(stod(palabra));
 			p.SetLongitud(stod(palabra2));
 			return is;
 		

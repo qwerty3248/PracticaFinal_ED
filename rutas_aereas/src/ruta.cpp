@@ -35,7 +35,7 @@ bool Ruta::operator ==(const Ruta &R)const{
 
 }
 bool Ruta::operator <(const Ruta &R)const{
-	//la verdad que ni idea, hay que preguntarselo
+	return true;//para que no salte error 
 
 }
 iterator Ruta::begin(){
