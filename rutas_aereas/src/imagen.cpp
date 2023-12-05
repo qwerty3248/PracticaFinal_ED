@@ -1,9 +1,10 @@
 #include "Imagen.h"
 #include "imagenES.h"
+#include <cassert>
 
 
 
-Imagen::Borrar(){
+void Imagen::Borrar(){
 	if (data != nullptr){
 		for (int i = 0; i < nf ; i++){
 			delete [] data[i];
@@ -60,7 +61,7 @@ Imagen::Imagen(int f,int c){
 }
 
 Imagen::Imagen(const Imagen & I){
-	Borrar(*this);
+	Borrar();
 	Copiar(I);
 
 
@@ -72,7 +73,7 @@ Imagen & Imagen::operator=(const Imagen & I){
 		Copiar(I);
 	
 	}
-	return *this:
+	return *this;
 
 }
    

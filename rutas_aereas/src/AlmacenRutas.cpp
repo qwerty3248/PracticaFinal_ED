@@ -9,12 +9,15 @@ using namespace std;
 Almacen_Rutas::Almacen_Rutas(){
 	rutas=map<string,Ruta>();
 }
-void Almacen_Rutas::Insertar(const Rutas &R){
-	rutas.insert(R);
+void Almacen_Rutas::Insertar(const Ruta &R){
+	pair<string,Ruta> mypair;
+	mypair.first = R.GetCode();
+	mypair.second = R;
+	rutas.emplace(mypair);
 
 }
 void Almacen_Rutas::Borrar(const Ruta &R){
-	rutas.erase(R);
+	rutas.erase(R.GetCode());
 }
 Ruta Almacen_Rutas::GetRuta(const string &a){
 	Ruta aux = *(rutas.find(a));

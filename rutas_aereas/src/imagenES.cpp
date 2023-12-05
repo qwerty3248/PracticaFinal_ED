@@ -9,6 +9,7 @@
 #include <fstream>
 #include <string>
 #include "imagenES.h"
+#include "Imagen.h"
 using namespace std;
 
 

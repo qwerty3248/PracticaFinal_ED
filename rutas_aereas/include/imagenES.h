@@ -8,6 +8,7 @@
 
 #ifndef _IMAGEN_ES_H_
 #define _IMAGEN_ES_H_
+#include <Imagen.h>
 
 /**
   * @brief Tipo de imagen

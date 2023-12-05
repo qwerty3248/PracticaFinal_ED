@@ -1,0 +1,6 @@
+/home/jesus/ED/PracticaFinal/PracticaFinal_ED/build/CMakeFiles/image.dir
+/home/jesus/ED/PracticaFinal/PracticaFinal_ED/build/CMakeFiles/pruebarotacion.dir
+/home/jesus/ED/PracticaFinal/PracticaFinal_ED/build/CMakeFiles/pruebapegado.dir
+/home/jesus/ED/PracticaFinal/PracticaFinal_ED/build/CMakeFiles/doc_doxygen.dir
+/home/jesus/ED/PracticaFinal/PracticaFinal_ED/build/CMakeFiles/edit_cache.dir
+/home/jesus/ED/PracticaFinal/PracticaFinal_ED/build/CMakeFiles/rebuild_cache.dir

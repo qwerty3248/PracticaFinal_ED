@@ -5,6 +5,8 @@
 #include <string>
 #include <cstring>
 #include "imagenES.h"
+
+
 enum Tipo_Pegado {OPACO, BLENDING};
 using namespace std;
 struct Pixel{
@@ -31,9 +33,9 @@ class Imagen{
    
    //set y get
    
-   void SetPixel(const Pixel p);
+   void SetPixel(const Pixel p, int i, int j);
    
-   Pixel GetPixel()const;
+   Pixel GetPixel(int i , int j)const;
    
    Pixel & operator ()(int i,int j);
    
