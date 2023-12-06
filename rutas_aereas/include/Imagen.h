@@ -29,7 +29,10 @@ using namespace std;
   * @brief Estructura de pixeles
   *
   * Declara como debe de ser un pixel
-  *
+  * r es la cantidad de rojo 
+  * g es la cantidad de verde
+  * b es la cantidad de azul
+  * transp es la trasnparencia de la imagen
   * @see Pixel
   */
 struct Pixel{
@@ -140,7 +143,7 @@ class Imagen{
    * @brief Funcion que lee una imagen
    *
    * @param nombre De donde se va a obtener la imagen
-   * @param nombredelamascara el nombre que tiene la mascara para aplicar a la imagen
+   * @param nombremascara el nombre que tiene la mascara para aplicar a la imagen
    */   
    void LeerImagen (const char *nombre,const string &nombremascara="");
   /**
@@ -168,7 +171,7 @@ class Imagen{
    * @param posi fila donde pegamos la imagen
    * @param posj columa donde pegamos la imagen
    * @param I imagen a pegar 
-   * @param tipopegado El tipo de pegado de la imagen, opaco o blending
+   * @param tippegado El tipo de pegado de la imagen, opaco o blending
    */   
    void PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado=OPACO);
   /**
@@ -177,7 +180,7 @@ class Imagen{
    * @param posi fila de la que queremos la imagen
    * @param posj columa de la que queremos la imagen
    * @param dimi dimension de las filas de la nueva imagen extraida
-   * @param imj dimension de las columnas de la nueva imagen extraida
+   * @param dimj dimension de las columnas de la nueva imagen extraida
    * @return Imagen extraida
    */   
    Imagen ExtraeImagen(int posi,int posj,int dimi,int dimj);

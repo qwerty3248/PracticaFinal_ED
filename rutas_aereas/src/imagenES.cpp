@@ -12,6 +12,14 @@
 #include "imagenES.h"
 using namespace std;
 
+/**
+ * @brief Funcion que dice de que tipo va a ser la imagen
+ *
+ * @param f de entrada donde debe estar el tipo de la imagen 
+ * @return Devuelve de que tipo es la imagen
+ * @see TipoImagen
+ */
+
 
 TipoImagen LeerTipo(ifstream& f)
 {
@@ -33,6 +41,15 @@ TipoImagen LeerTipo(ifstream& f)
 
 // _____________________________________________________________________________
 
+/**
+  * @brief Consulta el tipo de imagen del archivo
+  *
+  * @param nombre indica el nombre del archivo de disco a consultar
+  * @return Devuelve el tipo de la imagen en el archivo
+  *
+  * @see TipoImagen
+  */
+
 TipoImagen LeerTipoImagen(const char nombre[])
 {
   ifstream f(nombre);
@@ -41,6 +58,14 @@ TipoImagen LeerTipoImagen(const char nombre[])
 
 
 // _____________________________________________________________________________
+
+/**
+ * @brief Funcion que salta los separadares
+ *
+ * @param f de entrada de los archivos  
+ * @return Devuelve la letra ya sin separadores
+ */
+
 
 char SaltarSeparadores (ifstream& f)
 {
@@ -53,6 +78,16 @@ char SaltarSeparadores (ifstream& f)
 }
 
 // _____________________________________________________________________________
+
+/**
+ * @brief Funcion que lee las cabeceras
+ *
+ * @param f de entrada de los archivos
+ * @param filas las filas de las cabeceras
+ * @param  columnas las columnas de las cabeceras
+ * @return Devuelve si se han podido saltar los separadores
+ */
+
 
 bool LeerCabecera (ifstream& f, int& filas, int& columnas)
 {

@@ -4,3 +4,6 @@ INPUT                  = /home/jesus/ED/PracticaFinal/PracticaFinal_ED/rutas_aer
 GENERATE_LATEX         = NO
 IMAGE_PATH             = /home/jesus/ED/PracticaFinal/PracticaFinal_ED/rutas_aereas/doc
 EXTRACT_PRIVATE        = NO
+USE_MDFILE_AS_MAINPAGE = mainpage.dox
+
+

@@ -229,7 +229,7 @@ class Almacen_Rutas{
                 * @brief Operator << de la clase Almacen_Rutas
                 *
                 * @param os Flujo de salida con la salida del almacen de rutas
-                * @param AR El almacen de rutas del que salen los datos
+                * @param R El almacen de rutas del que salen los datos
                 * @return Devuelve el flujo de salida 
                 */		
 		friend ostream & operator <<(ostream & os, Almacen_Rutas &R);

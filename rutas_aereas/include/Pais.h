@@ -103,7 +103,7 @@ class Pais{
 	    	* @brief Operator >> para el pais con los datos del pais
 	    	*
 	    	* @param is flujo de entrada de datos para el pais
-	    	* @param P pais al que se le van a asignar los datos del flujo
+	    	* @param p pais al que se le van a asignar los datos del flujo
 	    	* @return Devuelve el flujo de entrada
 	    	*/		
 		friend istream & operator >>(istream & is, Pais &p);
