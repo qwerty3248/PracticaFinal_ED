@@ -31,38 +31,43 @@ void Ruta::SetCode(const string &codes){
 	code = codes;
 }
 bool Ruta::operator ==(const Ruta &R)const{
-	return ((strcmp(R.GetCode(),GetCode())==0) && (puntos == R.puntos));
+	const char * aux = R.GetCode().c_str();
+	const char * aux2 = GetCode().c_str();
+	return ((strcmp(aux,aux2)==0) && (puntos == R.puntos));
 
 }
 bool Ruta::operator <(const Ruta &R)const{
 	return true;//para que no salte error 
 
 }
-iterator Ruta::begin(){
-	iterator it;
-	it = puntos.begin();
+Ruta::iterator Ruta::begin(){
+	Ruta::iterator it;
+	it.p = puntos.begin();
 	return it;
 
 }
-const_iterator Ruta::begin()const{
-	const_iterator it = puntos.begin();
+Ruta::const_iterator Ruta::begin()const{
+	const_iterator it;
+	it.p = puntos.begin();
 	return it;
 }	
-iterator Ruta::end(){
-	iterator it = puntos.end();
+Ruta::iterator Ruta::end(){
+	Ruta::iterator it;
+	it.p = puntos.end();
 	return it;
 
 }
-const_iterator Ruta::end()const{
-	const_iterator it = puntos.end();
+Ruta::const_iterator Ruta::end()const{
+	Ruta::const_iterator it;
+	it.p = puntos.end();
 	return it;
 }
-iterator Ruta::find(const Punto &p){
-	iterator it;
+Ruta::iterator Ruta::find(const Punto &p){
+	Ruta::iterator it;
 	list<Punto>::iterator i;
 	for (i = puntos.begin(); i != puntos.end(); ++i){
 		if((*i) == p){
-			it = i;
+			it.p = i;
 			return it;
 		}
 	
@@ -83,8 +88,8 @@ istream & operator>>(istream &is, Ruta &R){
 ostream & operator<<(ostream &os, const Ruta &R){
 	os<<R.GetCode()<<"  "<<R.puntos.size()<<"  ";
 	int tam = R.puntos.size();
-	iterator it = R.begin();
-	while(it != R.end()){
+	list<Punto>::const_iterator it = R.puntos.cbegin();
+	while(it != R.puntos.cend()){
 		os<<*it;
 		++it;
 	}

@@ -41,7 +41,7 @@ class Almacen_Rutas{
                 *
                 * @param R ruta que se va a insertar
                 */		
-		void Insertar(const Rutas &R);
+		void Insertar(const Ruta &R);
                /**
                 * @brief Funcion que se va a borrar del map de rutas
                 *
@@ -95,7 +95,7 @@ class Almacen_Rutas{
 				*
 				* @return Devuelve el valor del iterador
 				*/				
-				pair<string,Ruta> &operator*(){
+				pair<string,Ruta> operator*(){
 					return *p;
 				}
 			       /**
@@ -164,7 +164,7 @@ class Almacen_Rutas{
 				*
 				* @return Devuelve el valor del iterador
 				*/				
-				const pair<string,Ruta> &operator*(){
+				const pair<string,Ruta> operator*()const {
 					return *p;
 				}
 			       /**
@@ -174,7 +174,7 @@ class Almacen_Rutas{
 				* @retval true si son iguales 
 				* @retval false si no son iguales
 				*/				
-				bool operator ==(const iterator &i)const{
+				bool operator ==(const_iterator &i)const{
 					return i.p == p;
 				
 				}
@@ -185,7 +185,7 @@ class Almacen_Rutas{
 				* @retval true si son distintos 
 				* @retval false si no son distintos
 				*/				
-				bool operator !=(const iterator &i)const{
+				bool operator !=(const_iterator &i)const{
 					return i.p != p;
 				}
 				friend class Almacen_Rutas;	

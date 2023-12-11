@@ -210,7 +210,7 @@ class Ruta{
 				*
 				* @return Devuelve el valor de la lista de puntos
 				*/				
-				const Punto & operator*(){
+				const Punto & operator*()const{
 					return *p;
 				}
 		
@@ -266,6 +266,6 @@ class Ruta{
 
 
 
-}
+};
 
 #endif

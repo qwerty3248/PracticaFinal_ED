@@ -21,14 +21,14 @@ string Pais::GetBandera()const{
 	return bandera;
 
 }
-void SetPunto(const Punto P){
+void Pais::SetPunto(const Punto P){
 	p.SetLatitud(P.GetLatitud());
 	p.SetLongitud(P.GetLongitud());
 } 
-void SetPais(const string Pais){
+void Pais::SetPais(const string Pais){
 	pais = Pais;
 }
-void SetBandera(const string Bandera){
+void Pais::SetBandera(const string Bandera){
 	bandera = Bandera;
 }
 

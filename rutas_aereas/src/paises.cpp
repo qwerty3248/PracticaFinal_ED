@@ -1,4 +1,4 @@
-#include "Paises.h"
+#include "paises.h"
 using namespace std;
 
   
@@ -12,35 +12,35 @@ using namespace std;
 	  datos.erase(P);
       }
       
-      iterator Paises::begin(){
-	  iterator it;
+      Paises::iterator Paises::begin(){
+	  Paises::iterator it;
 	  it.p = datos.begin();
 	  return it;
 	}  
-       const_iterator Paises::begin()const{
-	  const_iterator it;
+       Paises::const_iterator Paises::begin()const{
+	  Paises::const_iterator it;
 	  it.p = datos.begin();
 	  return it;
 	}
-       iterator Paises::end(){
-	  iterator it;
+       Paises::iterator Paises::end(){
+	  Paises::iterator it;
 	  it.p = datos.end();
 	  return it;
 	}
 	
-	const_iterator Paises::end()const{
-	  const_iterator it;
+	Paises::const_iterator Paises::end()const{
+	  Paises::const_iterator it;
 	  it.p = datos.end();
 	  return it;
 	}
-	iterator Paises::find(const Pais &p){
-	    iterator it;
+	Paises::iterator Paises::find(const Pais &p){
+	    Paises::iterator it;
 	    set<Pais>::iterator i;
 	    for (i=datos.begin(); i!=datos.end() && !((*i)==p);++i);
 	    it.p=i;
 	    return it;
 	}
-	iterator Paises::find(const Punto &p){
+	Paises::iterator Paises::find(const Punto &p){
 	    iterator it;
 	    set<Pais>::iterator i;
 	    for (i = datos.begin(); i != datos.end(); ++i){

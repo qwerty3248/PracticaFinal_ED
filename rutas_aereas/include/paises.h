@@ -84,7 +84,7 @@ class Paises{
             *
             * @return Devuelve el pais al que esta apuntando el operator
             */	    
-	    set<Pais> &operator *(){
+	    const Pais &operator *(){
 	    	return *p;
 	    
 	    }
@@ -156,7 +156,7 @@ class Paises{
             *
             * @return Devuelve el pais al que esta apuntando el operator
             */	    
-	    const set<Pais> &operator *(){
+	    const Pais &operator *()const{
 	    	return *p;
 	    
 	    }

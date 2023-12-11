@@ -53,7 +53,7 @@ using namespace std;
 		}
 		bool Punto::operator == (const Punto &p)const{
 			return ((latitud == p.GetLatitud()) &&
-			        (longitud == p.GetLongitud));
+			        (longitud == p.GetLongitud()));
 		
 		}
 		istream &operator >>(istream &is, Punto &p){
