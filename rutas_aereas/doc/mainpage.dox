@@ -1,20 +1,45 @@
 /**
- * @mainpage Nombre de tu Proyecto
+ * @mainpage Rutas Aereas
  *
- * Breve descripción de tu proyecto.
+ * En este proyecto se van a crear 3 programas, una que rota una imagen, otro
+ * que pega una imagen en otra y el último que pinta en un mapa una ruta aerea 
+ * elegida por el usuario.
+ * Este proyecto ha sido realizado por: Jesús Losada Arauzo y Javier Gómez Moleón
  *
- * @section intro_sec Introducción
- * Esta es la página principal de documentación para el proyecto.
+ * ## PruebaRotacion:
  *
- * @section install_sec Instalación
- * Instrucciones de instalación y requisitos del proyectosssss
+ * Crea una imagen rotada
  *
- * @section usage_sec Uso
- * Cómo utilizar y ejecutar el proyecto.
+ *> __pruebarotacion__ \<Imagendeentrada\> \<AnguloRotacion\> \<Imagensalida\>
+ *@param "<Imagendeentrada>" Imagen que se va a rotar
+ *@param <AnguloRotacion> Angulo que se va a rotar la imagen
+ *@param "<Imagensalida>" Nombre de la imagen rotada
  *
- * @section license_sec Licencia
- * Información sobre la licencia del proyecto.
+ * ## PruebaPegado:
+ *
+ * Crea una imagen pegada
+ *
+ *> __pruebapegado__ \<Imagendefondo\> \<Imagenapegar\> \<Mascaraimagen\> \<ImagenSalida\> \<Filadondepegar\> \<Columnadondepegar\> \<modopegado\>
+ *@param "<Imagendefondo>" Imagen que a la que se le va a pegar la otra imagen
+ *@param <Imagenapegar> Imagen que se va a pegar
+ *@param "<Mascaraimagen>" La mascara de la imagen a pegar
+ *@param <ImagenSalida> Imagen con las imagenes pegadas
+ *@param "<Filadondepegar>" Fila donde se va a pegar la imagen
+ *@param <Columnadondepegar> Columna donde se va a pegar la imagen
+ *@param "<modopegado>" el modo de pegado de la imagen
+ *
+ * ## RutaAerea:
+ *
+ * Crea una imagen con la ruta del usuario
+ *
+ *> __ruta_aerea__ \<ficheroconlospaises\> \<Imagenmapa\> \<ficherobanderas\> \<ficheroalmacenrutas\> \<imagendelavion\> \<mascaraavion\>
+ *@param "<ficheroconlospaises>" Fichero con los datos de los paises
+ *@param <Imagenmapa> Imagen con el mapa del mundo
+ *@param "<ficherobanderas>" Fichero con las banderas
+ *@param <ficheroalmacenrutas> Fichero con las rutas posibles
+ *@param "<imagendelavion>" Imagen del avion
+ *@param <mascaraavion> La mascara del avion
  */
 
-// Aquí puedes agregar más documentación si es necesario
+
 

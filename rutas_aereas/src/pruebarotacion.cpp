@@ -1,3 +1,7 @@
+//Fichero: pruebarotacion.cpp
+//Rota una imagen una cierta cantidad de grados
+//
+
 #include "Imagen.h"
 #include <iostream>
 #include <cstdlib>
@@ -12,6 +16,7 @@ int main(int argc, char * argv[]){
     cout<<"3.-El nombre de la imagen de salida"<<endl;
     return 0;
   }
+  //Leemos la imagen y luego la rotamos con la funcion rota
   Imagen I;
   I.LeerImagen(argv[1]);
   double angulo=atof(argv[2]);

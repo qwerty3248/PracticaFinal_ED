@@ -1,3 +1,7 @@
+//Fichero: pruebapegado.cpp
+//Pega una imagen encima de otra, en modo blending o en modo opaco
+//
+
 #include "Imagen.h"
 #include <iostream>
 #include <cstdlib>
@@ -19,6 +23,7 @@ int main(int argc, char * argv[]){
     cout<<"7.- 0: Pegado Opaco 1: Pegado Blending"<<endl;
     return 0;
   }
+  //Leemos las iamgenes
   Imagen I,Ip;
   I.LeerImagen(argv[1]);
   Ip.LeerImagen(argv[2],argv[3]);

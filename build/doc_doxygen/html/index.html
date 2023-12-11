@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Práctica Final: Rutas Aereas: Nombre de tu Proyecto</title>
+<title>Práctica Final: Rutas Aereas: Rutas Aereas</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,22 +62,59 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Nombre de tu Proyecto </div>  </div>
+<div class="title">Rutas Aereas </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Breve descripción de tu proyecto.</p>
-<h1><a class="anchor" id="intro_sec"></a>
-Introducción</h1>
-<p>Esta es la página principal de documentación para el proyecto.</p>
-<h1><a class="anchor" id="install_sec"></a>
-Instalación</h1>
-<p>Instrucciones de instalación y requisitos del proyectosssss</p>
-<h1><a class="anchor" id="usage_sec"></a>
-Uso</h1>
-<p>Cómo utilizar y ejecutar el proyecto.</p>
-<h1><a class="anchor" id="license_sec"></a>
-Licencia</h1>
-<p>Información sobre la licencia del proyecto. </p>
+<div class="textblock"><p>En este proyecto se van a crear 3 programas, una que rota una imagen, otro que pega una imagen en otra y el último que pinta en un mapa una ruta aerea elegida por el usuario. Este proyecto ha sido realizado por: Jesús Losada Arauzo y Javier Gómez Moleón</p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+PruebaRotacion:</h2>
+<p>Crea una imagen rotada</p>
+<blockquote class="doxtable">
+<p><b>pruebarotacion</b> &lt;Imagendeentrada&gt; &lt;AnguloRotacion&gt; &lt;Imagensalida&gt; </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;Imagendeentrada&gt;</td><td><a class="el" href="classImagen.html" title="Clase Imagen.">Imagen</a> que se va a rotar </td></tr>
+    <tr><td class="paramname">&lt;AnguloRotacion&gt;</td><td>Angulo que se va a rotar la imagen </td></tr>
+    <tr><td class="paramname">&lt;Imagensalida&gt;</td><td>Nombre de la imagen rotada</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2><a class="anchor" id="autotoc_md1"></a>
+PruebaPegado:</h2>
+<p>Crea una imagen pegada</p>
+<blockquote class="doxtable">
+<p><b>pruebapegado</b> &lt;Imagendefondo&gt; &lt;Imagenapegar&gt; &lt;Mascaraimagen&gt; &lt;ImagenSalida&gt; &lt;Filadondepegar&gt; &lt;Columnadondepegar&gt; &lt;modopegado&gt; </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;Imagendefondo&gt;</td><td><a class="el" href="classImagen.html" title="Clase Imagen.">Imagen</a> que a la que se le va a pegar la otra imagen </td></tr>
+    <tr><td class="paramname">&lt;Imagenapegar&gt;</td><td><a class="el" href="classImagen.html" title="Clase Imagen.">Imagen</a> que se va a pegar </td></tr>
+    <tr><td class="paramname">&lt;Mascaraimagen&gt;</td><td>La mascara de la imagen a pegar </td></tr>
+    <tr><td class="paramname">&lt;ImagenSalida&gt;</td><td><a class="el" href="classImagen.html" title="Clase Imagen.">Imagen</a> con las imagenes pegadas </td></tr>
+    <tr><td class="paramname">&lt;Filadondepegar&gt;</td><td>Fila donde se va a pegar la imagen </td></tr>
+    <tr><td class="paramname">&lt;Columnadondepegar&gt;</td><td>Columna donde se va a pegar la imagen </td></tr>
+    <tr><td class="paramname">&lt;modopegado&gt;</td><td>el modo de pegado de la imagen</td></tr>
+  </table>
+  </dd>
+</dl>
+<h2><a class="anchor" id="autotoc_md2"></a>
+RutaAerea:</h2>
+<p>Crea una imagen con la ruta del usuario</p>
+<blockquote class="doxtable">
+<p><b>ruta_aerea</b> &lt;ficheroconlospaises&gt; &lt;Imagenmapa&gt; &lt;ficherobanderas&gt; &lt;ficheroalmacenrutas&gt; &lt;imagendelavion&gt; &lt;mascaraavion&gt; </p>
+</blockquote>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;ficheroconlospaises&gt;</td><td>Fichero con los datos de los paises </td></tr>
+    <tr><td class="paramname">&lt;Imagenmapa&gt;</td><td><a class="el" href="classImagen.html" title="Clase Imagen.">Imagen</a> con el mapa del mundo </td></tr>
+    <tr><td class="paramname">&lt;ficherobanderas&gt;</td><td>Fichero con las banderas </td></tr>
+    <tr><td class="paramname">&lt;ficheroalmacenrutas&gt;</td><td>Fichero con las rutas posibles </td></tr>
+    <tr><td class="paramname">&lt;imagendelavion&gt;</td><td><a class="el" href="classImagen.html" title="Clase Imagen.">Imagen</a> del avion </td></tr>
+    <tr><td class="paramname">&lt;mascaraavion&gt;</td><td>La mascara del avion </td></tr>
+  </table>
+  </dd>
+</dl>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
