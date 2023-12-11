@@ -24,13 +24,27 @@ int main (int argc, char *argv[]){
 	}
 	
 	//argv[4] tiene las rutas
-
+	
+	Ruta y;
+	
+	cin>>y;
+	cout<<y<<endl;
+	
+	Almacen_Rutas z;
+	cin>>z;
+	cout<<z<<endl;
+	
+	exit(1);
 	Almacen_Rutas almacen;//creamos el almacen
 	
 	ifstream archivo (argv[4]);
 	archivo >> almacen;//Le pasamos los datos
 	
+	cout<<almacen.GetRuta("R1")<<endl;
+	
 	cout << almacen;//Sacamos por pantalla los datos del almacen
+	
+	exit(1);
 	
 	string elegida;
 	
@@ -38,13 +52,17 @@ int main (int argc, char *argv[]){
 	
 	Ruta elegida_user = almacen.GetRuta(elegida);//tenemos la ruta elegida por el usuario
 	
+	cout<<elegida_user<<endl;
+	
 	Imagen mapa;
 	mapa.LeerImagen(argv[2]);//obtenemos el mapa
 	Paises mundo;
 	
 	ifstream paises (argv[1]);
 	paises >> mundo;//cogemos todos los paises
-	
+
+	cout<<"Hasta aqui \n";	
+		
 	string banderas = argv[3];
 	Imagen avion;
 	avion.LeerImagen(argv[5],argv[6]);

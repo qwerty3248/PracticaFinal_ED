@@ -57,7 +57,7 @@ using namespace std;
 		
 		}
 		istream &operator >>(istream &is, Punto &p){
-			char c = is.get();//(
+			/*char c = is.get();//(
 			string palabra = "";
 			c = is.get();
 			//en c la primera letra
@@ -74,14 +74,27 @@ using namespace std;
 			//c = )
 			p.SetLatitud(stod(palabra));
 			p.SetLongitud(stod(palabra2));
+			return is;*/
+			
+			
+			char c = is.get();
+			double primero,segundo;
+			
+			is >> primero;
+			
+			is.ignore();
+			
+			is >> segundo;
+
+			p.SetLatitud(primero);
+			p.SetLongitud(segundo);			
+			
 			return is;
 		
 		}
 		ostream &operator <<(ostream &os, const Punto &p){
 			
-			os<<p.GetLatitud();
-			os<<"   ";
-			os<<p.GetLongitud();
+			os<<'('<<p.GetLatitud()<<','<<p.GetLongitud()<<')';
 		
 			return os;
 		}

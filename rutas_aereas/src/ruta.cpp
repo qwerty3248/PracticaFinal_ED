@@ -75,14 +75,16 @@ Ruta::iterator Ruta::find(const Punto &p){
 	return it;
 }
 istream & operator>>(istream &is, Ruta &R){
-	string paraules;
-	is>>paraules;
-	R.SetCode(paraules);
-	is>>paraules;//saltamos el numero.
-	Punto aux;
-	while (is>>aux){
-		R.Insertar(aux);	
-	}
+	is>>R.code;
+	
+	int num;
+	is>>num;//saltamos el numero.
+	
+	for (int i = 0; i < num ; i++){
+		Punto aux;
+		is >> aux;
+		R.Insertar(aux);
+	}	
 	return is;
 }
 ostream & operator<<(ostream &os, const Ruta &R){

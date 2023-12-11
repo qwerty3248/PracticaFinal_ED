@@ -9,10 +9,7 @@ Almacen_Rutas::Almacen_Rutas(){
 	rutas=map<string,Ruta>();
 }
 void Almacen_Rutas::Insertar(const Ruta &R){
-	pair<string,Ruta> mypair;
-	mypair.first = R.GetCode();
-	mypair.second = R;
-	rutas.emplace(mypair);
+	rutas.insert({R.GetCode(),R});
 
 }
 void Almacen_Rutas::Borrar(const Ruta &R){
@@ -44,22 +41,24 @@ Almacen_Rutas::const_iterator Almacen_Rutas::end()const{
 }
 istream & operator >>(istream & is,Almacen_Rutas &AR){
 	      
-	      //leemos el comentario
-	      if (is.peek()=='#'){
-		string a;
-		getline(is,a);
-	      }
+	   // Leer comentarios
+	   while (is.peek() == '#') {
+		string comment;
+		getline(is, comment);
+	   }
 	      
-	      while (!is.eof()){
-	        Ruta aux;
-	        is>>aux;
-	        string codigo= aux.GetCode();
-	        pair<string,Ruta> myPair;
-	        myPair.first = codigo;
-	        myPair.second = aux;
-	      	AR.rutas.insert(myPair);
-	      }
-	      return is;
+		
+	   while (!is.eof()) {
+		Ruta aux;
+		is >> aux;
+		string codigo = aux.GetCode();
+		pair<string, Ruta> myPair;
+		myPair.first = codigo;
+		myPair.second = aux;
+		AR.rutas.insert(myPair);
+	    }
+	    
+	    return is;
 	      
 
 }
