@@ -10,6 +10,7 @@
 #include <string>
 #include "Imagen.h"
 #include "imagenES.h"
+#include "Punto.h"
 using namespace std;
 
 /**

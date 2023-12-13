@@ -57,7 +57,7 @@ using namespace std;
 		
 		}
 		istream &operator >>(istream &is, Punto &p){
-			/*char c = is.get();//(
+			char c = is.get();//(
 			string palabra = "";
 			c = is.get();
 			//en c la primera letra
@@ -72,12 +72,15 @@ using namespace std;
 				c=is.get();
 			}
 			//c = )
-			p.SetLatitud(stod(palabra));
-			p.SetLongitud(stod(palabra2));
-			return is;*/
+			double aux1 = stod(palabra),
+			       aux2 =stod(palabra2);
+			cout << "Palabra 1: " << palabra << ", Palabra 2: " << palabra2 << endl;       
+			p.SetLatitud(aux1);
+			p.SetLongitud(aux2);
+			return is;
 			
 			
-			char c = is.get();
+			/*char c = is.get();
 			double primero,segundo;
 			
 			is >> primero;
@@ -89,7 +92,7 @@ using namespace std;
 			p.SetLatitud(primero);
 			p.SetLongitud(segundo);			
 			
-			return is;
+			return is;*/
 		
 		}
 		ostream &operator <<(ostream &os, const Punto &p){

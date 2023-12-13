@@ -1,8 +1,10 @@
 #include "Imagen.h"
 #include "imagenES.h"
+
 #include <cassert>
 #include <cmath>
 #include <cstdlib>
+
 
 
 
@@ -27,7 +29,7 @@ void Imagen::Copiar(const Imagen &I){//reservo la memoria aqui
 	}//reserva de memoria completa
 	
 	for (int i = 0; i < nf; i++){
-		for(int k = 0; k < 0; k++){
+		for(int k = 0; k < nc; k++){
 			data[i][k] = I(i,k);
 		
 		}
@@ -192,7 +194,7 @@ void Imagen::LimpiarTransp(){
 }	
 
 void Imagen::PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado){
-    assert(nf>=posi+I.nf && nc>=posj+I.nc);
+    //assert(nf>=posi+I.nf && nc>=posj+I.nc);
     
     for (int i=0;i<I.nf;i++)
       for (int j=0;j<I.nc;j++)

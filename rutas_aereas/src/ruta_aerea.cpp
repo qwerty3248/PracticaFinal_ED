@@ -25,16 +25,22 @@ int main (int argc, char *argv[]){
 	
 	//argv[4] tiene las rutas
 	
+	Punto x;
+	
+	cin>>x;
+	cout<<x<<endl;
+	
 	Ruta y;
 	
 	cin>>y;
 	cout<<y<<endl;
 	
+	exit(1);
 	Almacen_Rutas z;
 	cin>>z;
 	cout<<z<<endl;
 	
-	exit(1);
+
 	Almacen_Rutas almacen;//creamos el almacen
 	
 	ifstream archivo (argv[4]);
@@ -44,7 +50,6 @@ int main (int argc, char *argv[]){
 	
 	cout << almacen;//Sacamos por pantalla los datos del almacen
 	
-	exit(1);
 	
 	string elegida;
 	
