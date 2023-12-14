@@ -65,8 +65,8 @@ istream & operator >>(istream & is,Almacen_Rutas &AR){
 ostream & operator <<(ostream & os, Almacen_Rutas &R){
 	 
 	//int tam = R.rutas.size();
-	map<string,Ruta>::const_iterator it = R.rutas.begin();
-	while (it != R.rutas.end()){
+	map<string,Ruta>::const_iterator it = R.rutas.cbegin();
+	while (it != R.rutas.cend()){
 		os<<it->second<<"\n";
 		++it;
 	}

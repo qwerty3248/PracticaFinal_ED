@@ -49,7 +49,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/image.dir/DependInfo.cmake"
+  "CMakeFiles/punto.dir/DependInfo.cmake"
+  "CMakeFiles/pais.dir/DependInfo.cmake"
+  "CMakeFiles/ruta.dir/DependInfo.cmake"
   "CMakeFiles/pruebarotacion.dir/DependInfo.cmake"
   "CMakeFiles/pruebapegado.dir/DependInfo.cmake"
+  "CMakeFiles/ruta_aerea.dir/DependInfo.cmake"
   "CMakeFiles/doc_doxygen.dir/DependInfo.cmake"
   )

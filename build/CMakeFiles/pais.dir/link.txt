@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpais.a CMakeFiles/pais.dir/rutas_aereas/src/pais.cpp.o CMakeFiles/pais.dir/rutas_aereas/src/paises.cpp.o
+/usr/bin/ranlib libpais.a

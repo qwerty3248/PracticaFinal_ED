@@ -1,0 +1,2 @@
+/usr/bin/ar qc libruta.a CMakeFiles/ruta.dir/rutas_aereas/src/ruta.cpp.o CMakeFiles/ruta.dir/rutas_aereas/src/AlmacenRutas.cpp.o
+/usr/bin/ranlib libruta.a

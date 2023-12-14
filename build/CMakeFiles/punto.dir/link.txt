@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpunto.a CMakeFiles/punto.dir/rutas_aereas/src/punto.cpp.o
+/usr/bin/ranlib libpunto.a

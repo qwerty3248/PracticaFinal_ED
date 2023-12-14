@@ -73,8 +73,7 @@ using namespace std;
 			}
 			//c = )
 			double aux1 = stod(palabra),
-			       aux2 =stod(palabra2);
-			cout << "Palabra 1: " << palabra << ", Palabra 2: " << palabra2 << endl;       
+			       aux2 =stod(palabra2);     
 			p.SetLatitud(aux1);
 			p.SetLongitud(aux2);
 			return is;

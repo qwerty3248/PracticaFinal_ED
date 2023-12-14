@@ -7,6 +7,9 @@ set(BASE_FOLDER rutas_aereas)
 include_directories(${BASE_FOLDER}/include)
 
 add_library(image ${BASE_FOLDER}/src/imagen.cpp  ${BASE_FOLDER}/src/imagenES.cpp)
+add_library(punto ${BASE_FOLDER}/src/punto.cpp)
+add_library(pais ${BASE_FOLDER}/src/pais.cpp ${BASE_FOLDER}/src/paises.cpp)
+add_library(ruta ${BASE_FOLDER}/src/ruta.cpp ${BASE_FOLDER}/src/AlmacenRutas.cpp)
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/pruebarotacion.cpp)
 add_executable(pruebarotacion ${BASE_FOLDER}/src/pruebarotacion.cpp)
@@ -20,7 +23,7 @@ endif()
 
 if (EXISTS ${CMAKE_SOURCE_DIR}/${BASE_FOLDER}/src/ruta_aerea.cpp)
 add_executable(ruta_aerea ${BASE_FOLDER}/src/ruta_aerea.cpp)
-target_link_libraries(ruta_aerea LINK_PUBLIC image)
+target_link_libraries(ruta_aerea LINK_PUBLIC image pais punto ruta)
 endif()
 
 # check if Doxygen is installed

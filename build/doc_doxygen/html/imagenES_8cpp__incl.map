@@ -1,9 +1,10 @@
 <map id="src/imagenES.cpp" name="src/imagenES.cpp">
-<area shape="rect" id="node1" title="Fichero con definiciones para la E/S de imágenes." alt="" coords="109,5,247,32"/>
+<area shape="rect" id="node1" title="Fichero con definiciones para la E/S de imágenes." alt="" coords="239,5,376,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,155,79,181"/>
 <area shape="rect" id="node3" title=" " alt="" coords="103,155,162,181"/>
-<area shape="rect" id="node4" href="$Imagen_8h.html" title="Fichero cabecera para la clase imagen." alt="" coords="221,80,303,107"/>
+<area shape="rect" id="node4" href="$Imagen_8h.html" title="Fichero cabecera para la clase imagen." alt="" coords="266,80,349,107"/>
 <area shape="rect" id="node8" href="$imagenES_8h.html" title="Fichero cabecera para la E/S de imágenes." alt="" coords="559,155,658,181"/>
+<area shape="rect" id="node10" href="$Punto_8h.html" title="Fichero cabecera para la clase punto." alt="" coords="416,80,487,107"/>
 <area shape="rect" id="node5" title=" " alt="" coords="455,155,535,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="187,155,249,181"/>
 <area shape="rect" id="node7" title=" " alt="" coords="274,155,341,181"/>
