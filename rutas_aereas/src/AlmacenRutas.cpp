@@ -49,6 +49,7 @@ istream & operator >>(istream & is,Almacen_Rutas &AR){
 	      
 		
 	   while (!is.eof()) {
+
 		Ruta aux;
 		is >> aux;
 		string codigo = aux.GetCode();
@@ -58,6 +59,15 @@ istream & operator >>(istream & is,Almacen_Rutas &AR){
 		AR.rutas.insert(myPair);
 	    }
 	    
+		/*Ruta aux;
+		while (is >> aux) {
+			string codigo = aux.GetCode();
+			pair<string, Ruta> myPair;
+			myPair.first = codigo;
+			myPair.second = aux;
+			AR.rutas.insert(myPair);
+		}
+		*/
 	    return is;
 	      
 
@@ -66,8 +76,14 @@ ostream & operator <<(ostream & os, Almacen_Rutas &R){
 	 
 	//int tam = R.rutas.size();
 	map<string,Ruta>::const_iterator it = R.rutas.cbegin();
+	bool primera = true;
 	while (it != R.rutas.cend()){
-		os<<it->second<<"\n";
+		if (primera){
+			os<<"#Rutas disponibles para elegir por el usuario\n";
+			primera = false;
+		}else{
+			os<<it->second<<"\n";
+		}
 		++it;
 	}
 	

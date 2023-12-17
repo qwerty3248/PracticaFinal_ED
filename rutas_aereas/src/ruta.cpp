@@ -37,7 +37,7 @@ bool Ruta::operator ==(const Ruta &R)const{
 
 }
 bool Ruta::operator <(const Ruta &R)const{
-	return true;//para que no salte error 
+	return code < R.code; 
 
 }
 Ruta::iterator Ruta::begin(){
@@ -83,7 +83,7 @@ istream & operator>>(istream &is, Ruta &R){
 	for (int i = 0; i < num ; i++){
 		Punto aux;
 		is >> aux;
-		R.Insertar(aux);
+		R.Insertar(aux);	
 	}	
 	return is;
 }

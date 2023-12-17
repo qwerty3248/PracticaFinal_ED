@@ -22,24 +22,6 @@ int main (int argc, char *argv[]){
 		cerr<<"ERROR: numero invalido de argumentos pruebe con: \n [programa] [arch paises] [imagen mapa] [fich banderas] [fichero con rutas] [imagen avion] [mascara avion]\n";
 		exit(-1);
 	}
-	
-	//argv[4] tiene las rutas
-	
-	Punto x;
-	
-	cin>>x;
-	cout<<x<<endl;
-	
-	Ruta y;
-	
-	cin>>y;
-	cout<<y<<endl;
-	
-	exit(1);
-	Almacen_Rutas z;
-	cin>>z;
-	cout<<z<<endl;
-	
 
 	Almacen_Rutas almacen;//creamos el almacen
 	
@@ -49,7 +31,6 @@ int main (int argc, char *argv[]){
 	cout<<almacen.GetRuta("R1")<<endl;
 	
 	cout << almacen;//Sacamos por pantalla los datos del almacen
-	
 	
 	string elegida;
 	

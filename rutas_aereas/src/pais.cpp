@@ -2,6 +2,7 @@
 #include "Pais.h"
 #include <string>
 #include <cstring>
+#include <iomanip>
 using namespace std;
 
 Pais::Pais(){
@@ -45,11 +46,11 @@ bool Pais::operator ==(const Punto &P)const{
 }
 istream & operator >>(istream & is, Pais &p){
 	Punto aux;
-	string pala1="",pala="";
+	double pala1,pala;
 	is>>pala1;
 	is>>pala;
-	aux.SetLatitud(stod(pala1));
-	aux.SetLongitud(stod(pala));
+	aux.SetLatitud(pala1);
+	aux.SetLongitud(pala);
 	p.SetPunto(aux);
 	string palabra1;
 	is>>palabra1;
@@ -61,7 +62,7 @@ istream & operator >>(istream & is, Pais &p){
 
 }
 ostream & operator <<(ostream & os, const Pais &P){
-	os<<P.GetPunto();
+	os<<setprecision(17)<<P.GetPunto().GetLatitud()<<"   "<<setprecision(17)<<P.GetPunto().GetLongitud();
 	os<<"   ";
 	os<<P.GetPais();
 	os<<"   ";
