@@ -15,7 +15,8 @@
 #include <cmath>
 #include <iostream>
 using namespace std;
-
+/*./ruta_aerea ../datos/paises.txt ../datos/imagenes/mapas/mapa1.ppm ../datos/imagenes/banderas ../datos/almacen_rutas.txt  ../datos/imagenes/aviones/avion1.ppm ../datos/imagenes/aviones/mascara_avion1.pgm */
+const string Rotado = "Avion_rotado";
 int main (int argc, char *argv[]){
 
 	if (argc != 7){
@@ -27,8 +28,6 @@ int main (int argc, char *argv[]){
 	
 	ifstream archivo (argv[4]);
 	archivo >> almacen;//Le pasamos los datos
-	
-	cout<<almacen.GetRuta("R1")<<endl;
 	
 	cout << almacen;//Sacamos por pantalla los datos del almacen
 	
@@ -46,8 +45,6 @@ int main (int argc, char *argv[]){
 	
 	ifstream paises (argv[1]);
 	paises >> mundo;//cogemos todos los paises
-
-	cout<<"Hasta aqui \n";	
 		
 	string banderas = argv[3];
 	Imagen avion;
@@ -88,10 +85,11 @@ int main (int argc, char *argv[]){
 		fil2 = (fils/180.0)*(90-p2.GetLatitud());
 		
 		double angulo_rotar = atan2(col2-col1,fil2-fil1);//formula con la que rotamos un angulo
-		
+		double aungulo_contrario = 360.0 - angulo_rotar;
+	
 		mapa.PutImagen(fil1,col1,avion);//avion en p1
 		mapa.PutImagen(fil2,col2,avion);//avion en p2
-		mapa.PutImagen((fil1-fil2)/2,(col1-col2)/2,Rota(avion,angulo_rotar));//avion rotado entre medias
+		mapa.PutImagen((fil2+fil1)/2,(col2+col1)/2,Rota(avion,aungulo_contrario));//avion rotado entre medias
 		mapa.PutImagen(fil1,col1,bandera_p1);//pegamos la bandera de c1
 		mapa.PutImagen(fil2,col2,bandera_p2);//pegamos la bandera de c2
 	
