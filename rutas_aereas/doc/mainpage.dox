@@ -4,6 +4,14 @@
  * En este proyecto se van a crear 3 programas, una que rota una imagen, otro
  * que pega una imagen en otra y el último que pinta en un mapa una ruta aerea 
  * elegida por el usuario.
+ *
+ * ## Modificaciones realizadas al código dado:
+ * -En el CMakeList adjuntamos las bibliotecas que faltaban para compilar el proyecto de rutas aereas
+ *
+ * -En la funcion rota de imagen, añadir Iout(rows,cols).transp=0 y unos corchetes al else del doble for
+ *
+ * Además están todos los iteradores implementados.
+ *
  * Este proyecto ha sido realizado por: Jesús Losada Arauzo y Javier Gómez Moleón
  *
  * ## PruebaRotacion:
@@ -30,7 +38,7 @@
  *
  * ## RutaAerea:
  *
- * Crea una imagen con la ruta del usuario
+ * Crea una imagen con la ruta del usuario, a veces al ejecutarlo de queda pillado tan solo hay que ejecutarlo de nuevo
  *
  *> __ruta_aerea__ \<ficheroconlospaises\> \<Imagenmapa\> \<ficherobanderas\> \<ficheroalmacenrutas\> \<imagendelavion\> \<mascaraavion\>
  *@param "<ficheroconlospaises>" Fichero con los datos de los paises
@@ -39,6 +47,9 @@
  *@param <ficheroalmacenrutas> Fichero con las rutas posibles
  *@param "<imagendelavion>" Imagen del avion
  *@param <mascaraavion> La mascara del avion
+ *
+ *@image html mapa.png "Una de las rutas del mapa una vez que ejecutas el programa"
+ *
  */
 
 

@@ -65,8 +65,14 @@ $(function() {
 <div class="title">Rutas Aereas </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>En este proyecto se van a crear 3 programas, una que rota una imagen, otro que pega una imagen en otra y el último que pinta en un mapa una ruta aerea elegida por el usuario. Este proyecto ha sido realizado por: Jesús Losada Arauzo y Javier Gómez Moleón</p>
+<div class="textblock"><p>En este proyecto se van a crear 3 programas, una que rota una imagen, otro que pega una imagen en otra y el último que pinta en un mapa una ruta aerea elegida por el usuario.</p>
 <h2><a class="anchor" id="autotoc_md0"></a>
+Modificaciones realizadas al código dado:</h2>
+<p>-En el CMakeList adjuntamos las bibliotecas que faltaban para compilar el proyecto de rutas aereas</p>
+<p>-En la funcion rota de imagen, añadir Iout(rows,cols).transp=0 y unos corchetes al else del doble for</p>
+<p>Además están todos los iteradores implementados.</p>
+<p>Este proyecto ha sido realizado por: Jesús Losada Arauzo y Javier Gómez Moleón</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
 PruebaRotacion:</h2>
 <p>Crea una imagen rotada</p>
 <blockquote class="doxtable">
@@ -80,7 +86,7 @@ PruebaRotacion:</h2>
   </table>
   </dd>
 </dl>
-<h2><a class="anchor" id="autotoc_md1"></a>
+<h2><a class="anchor" id="autotoc_md2"></a>
 PruebaPegado:</h2>
 <p>Crea una imagen pegada</p>
 <blockquote class="doxtable">
@@ -98,9 +104,9 @@ PruebaPegado:</h2>
   </table>
   </dd>
 </dl>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 RutaAerea:</h2>
-<p>Crea una imagen con la ruta del usuario</p>
+<p>Crea una imagen con la ruta del usuario, a veces al ejecutarlo de queda pillado tan solo hay que ejecutarlo de nuevo</p>
 <blockquote class="doxtable">
 <p><b>ruta_aerea</b> &lt;ficheroconlospaises&gt; &lt;Imagenmapa&gt; &lt;ficherobanderas&gt; &lt;ficheroalmacenrutas&gt; &lt;imagendelavion&gt; &lt;mascaraavion&gt; </p>
 </blockquote>
@@ -111,11 +117,15 @@ RutaAerea:</h2>
     <tr><td class="paramname">&lt;ficherobanderas&gt;</td><td>Fichero con las banderas </td></tr>
     <tr><td class="paramname">&lt;ficheroalmacenrutas&gt;</td><td>Fichero con las rutas posibles </td></tr>
     <tr><td class="paramname">&lt;imagendelavion&gt;</td><td><a class="el" href="classImagen.html" title="Clase Imagen.">Imagen</a> del avion </td></tr>
-    <tr><td class="paramname">&lt;mascaraavion&gt;</td><td>La mascara del avion </td></tr>
+    <tr><td class="paramname">&lt;mascaraavion&gt;</td><td>La mascara del avion</td></tr>
   </table>
   </dd>
 </dl>
-</div></div><!-- PageDoc -->
+<div class="image">
+<img src="mapa.png" alt=""/>
+<div class="caption">
+Una de las rutas del mapa una vez que ejecutas el programa</div></div>
+ </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

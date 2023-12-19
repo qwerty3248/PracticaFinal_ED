@@ -248,10 +248,10 @@ CMakeFiles/pruebapegado.dir/clean:
 # Target rules for target CMakeFiles/ruta_aerea.dir
 
 # All Build rule for target.
+CMakeFiles/ruta_aerea.dir/all: CMakeFiles/image.dir/all
 CMakeFiles/ruta_aerea.dir/all: CMakeFiles/punto.dir/all
 CMakeFiles/ruta_aerea.dir/all: CMakeFiles/pais.dir/all
 CMakeFiles/ruta_aerea.dir/all: CMakeFiles/ruta.dir/all
-CMakeFiles/ruta_aerea.dir/all: CMakeFiles/image.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ruta_aerea.dir/build.make CMakeFiles/ruta_aerea.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ruta_aerea.dir/build.make CMakeFiles/ruta_aerea.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jesus/ED/PracticaFinal/PracticaFinal_ED/build/CMakeFiles --progress-num=17,18 "Built target ruta_aerea"

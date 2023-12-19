@@ -349,13 +349,16 @@ Imagen Rota(const Imagen & Io,double angulo){
 	      Iout(rows,cols)=Io(old_row,old_col);
               
 	   }
-	   else
-	     Iout(rows,cols).r=Iout(rows,cols).g=Iout(rows,cols).b=255;
+	   else{
+	     Iout(rows,cols).r=Iout(rows,cols).g=Iout(rows,cols).b=255;Iout(rows,cols).transp=0;
+	   	}
+
 	}
     }
     return Iout;
 	  
 }
+
 
 
 

@@ -91,15 +91,13 @@ int main (int argc, char *argv[]){
 
 		
 
-		Imagen avioncito = Rota(avion,angulo_rotar); 
-		avioncito.LimpiarTransp();
-		
-
+		Imagen avioncito = Rota(avion,angulo_rotar);
+		mapa.PutImagen(fil1,col1,bandera_p1);//pegamos la bandera de c1
+		mapa.PutImagen(fil2,col2,bandera_p2);//pegamos la bandera de c2
 		mapa.PutImagen(fil1,col1,avioncito);//avion en p1
 		mapa.PutImagen(fil2,col2,avioncito);//avion en p2
 		mapa.PutImagen((fil2+fil1)/2,(col2+col1)/2,avioncito);//avion rotado entre medias
-		mapa.PutImagen(fil1,col1,bandera_p1);//pegamos la bandera de c1
-		mapa.PutImagen(fil2,col2,bandera_p2);//pegamos la bandera de c2
+		
 	
 	}
 	
