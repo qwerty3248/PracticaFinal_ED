@@ -58,47 +58,34 @@ using namespace std;
 		}
 		istream &operator >>(istream &is, Punto &p){
 			
-			/*
-			char c = is.get();//(
+
+			char c;
+			while(c != '(') is.get(c);
+			
 			string palabra = "";
-			c = is.get();
+			is.get(c);
 			//en c la primera letra
 			while (c != ','){
-				palabra.push_back(c);
-				c=is.get();
+				palabra+=c;
+				is.get(c);
 			}
-			string palabra2 = "";
-			c=is.get();//saltamos la ,
+			double aux1 = stod(palabra);
+			
+			palabra = "";
+
+			is.get(c);
 			while(c != ')'){
-				palabra2.push_back(c);
-				c=is.get();
+				palabra.push_back(c);
+				is.get(c);
 			}
-			//c = )
-			double aux1 = stod(palabra),
-			       aux2 =stod(palabra2);     
+			
+			double aux2 = stod(palabra);
+
 			p.SetLatitud(aux1);
 			p.SetLongitud(aux2);
 			return is;
-			
-			*/
-			
-			/*char c = is.get();
-			double primero,segundo;
-			
-			is >> primero;
-			
-			is.ignore();
-			
-			is >> segundo;
 
-			p.SetLatitud(primero);
-			p.SetLongitud(segundo);
-
-			char parentesis;
-			is >> parentesis;			
-			
-			return is;*/
-
+			/*
 			char c;
 			double primero, segundo;
 
@@ -138,7 +125,7 @@ using namespace std;
 				p.SetLatitud(primero);
 				p.SetLongitud(segundo);
 
-				return is;
+				return is;*/
 		
 		}
 		ostream &operator <<(ostream &os, const Punto &p){

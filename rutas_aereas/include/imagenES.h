@@ -91,6 +91,9 @@ bool LeerImagenPGM (const char nombre[], int& filas, int& columnas, unsigned cha
   */
 bool EscribirImagenPGM (const char nombre[], const unsigned char datos[], int f, int c);
 
+
+
+
 #endif
 
 /* Fin Fichero: imagenES.h */

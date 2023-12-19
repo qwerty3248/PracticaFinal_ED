@@ -186,8 +186,13 @@ void Imagen::LimpiarTransp(){
 	for (int i = 0; i < nf; i++){
 		for (int j = 0; j < nc; j++){
 			Pixel &p = data[i][j];
-			p.transp = 0;
+			if (p.transp != 255){
+				p.transp = 0;
+
+			}
+			
 		}
+
 	}	
 	
 	

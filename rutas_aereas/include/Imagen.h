@@ -153,6 +153,7 @@ class Imagen{
    *
    */   
    void LimpiarTransp();
+
   /**
    * @brief Funcion que devuelve el numero de filas de una imagen
    *
