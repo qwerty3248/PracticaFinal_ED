@@ -85,17 +85,18 @@ int main (int argc, char *argv[]){
 		fil1 = (fils/180.0)*(90-p1.GetLatitud());
 		fil2 = (fils/180.0)*(90-p2.GetLatitud());
 		
-		double angulo_rotar = atan2(col2-col1,fil2-fil1);//formula con la que rotamos un angulo
-		double aungulo_contrario = 360.0 - angulo_rotar;
+		double angulo_rotar = atan2(fil2-fil1,col2-col1);//formula con la que rotamos un angulo
+		//double aungulo_contrario = 360.0 - angulo_rotar;
+
 
 		
 
-		Imagen avioncito = Rota(avion,aungulo_contrario);
+		Imagen avioncito = Rota(avion,angulo_rotar); 
 		avioncito.LimpiarTransp();
 		
 
-		mapa.PutImagen(fil1,col1,avion);//avion en p1
-		mapa.PutImagen(fil2,col2,avion);//avion en p2
+		mapa.PutImagen(fil1,col1,avioncito);//avion en p1
+		mapa.PutImagen(fil2,col2,avioncito);//avion en p2
 		mapa.PutImagen((fil2+fil1)/2,(col2+col1)/2,avioncito);//avion rotado entre medias
 		mapa.PutImagen(fil1,col1,bandera_p1);//pegamos la bandera de c1
 		mapa.PutImagen(fil2,col2,bandera_p2);//pegamos la bandera de c2
