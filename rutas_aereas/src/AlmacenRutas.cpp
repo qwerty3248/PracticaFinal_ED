@@ -6,7 +6,7 @@ using namespace std;
 //dhacer los metodos
 
 Almacen_Rutas::Almacen_Rutas(){
-	rutas=map<string,Ruta>();
+	rutas=unordered_map<string,Ruta>();
 }
 void Almacen_Rutas::Insertar(const Ruta &R){
 	rutas.insert({R.GetCode(),R});
@@ -59,23 +59,14 @@ istream & operator >>(istream & is,Almacen_Rutas &AR){
 		AR.rutas.insert(myPair);
 	    }
 	    
-		/*Ruta aux;
-		while (is >> aux) {
-			string codigo = aux.GetCode();
-			pair<string, Ruta> myPair;
-			myPair.first = codigo;
-			myPair.second = aux;
-			AR.rutas.insert(myPair);
-		}
-		*/
 	    return is;
 	      
 
 }
 ostream & operator <<(ostream & os, Almacen_Rutas &R){
 	 
-	//int tam = R.rutas.size();
-	map<string,Ruta>::const_iterator it = R.rutas.cbegin();
+
+	unordered_map<string,Ruta>::const_iterator it = R.rutas.cbegin();
 	bool primera = true;
 	while (it != R.rutas.cend()){
 		if (primera){

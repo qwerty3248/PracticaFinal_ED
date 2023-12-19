@@ -11,7 +11,7 @@
 #include "Rutas.h"
 #include <cstring>
 #include <string>
-#include <map>
+#include <unordered_map>
 using namespace std;
 
 /**
@@ -26,7 +26,8 @@ class Almacen_Rutas{
 
 	private:
 
-		map<string,Ruta> rutas;
+		unordered_map<string,Ruta> rutas;
+
 
 
 	public:
@@ -63,7 +64,7 @@ class Almacen_Rutas{
 		class iterator{
 			
 			private:
-				map<string,Ruta>::iterator p;
+				unordered_map<string,Ruta>::iterator p;
 			
 			public:
 			       /**
@@ -81,15 +82,7 @@ class Almacen_Rutas{
 					++p;	
 					return *this;
 				}
-			       /**
-				* @brief  Operator -- de la clase iterator
-				*
-				* @return Devuelve el iterador retrasado
-				*/				
-				iterator & operator--(){
-					--p;
-					return *this;
-				}
+
 			       /**
 				* @brief  Operator * de la clase iterator
 				*
@@ -132,7 +125,7 @@ class Almacen_Rutas{
 		class const_iterator{
 		
 			private:
-				map<string,Ruta>::const_iterator p;
+				unordered_map<string,Ruta>::const_iterator p;
 				
 			public:	
 			       /**
@@ -150,15 +143,7 @@ class Almacen_Rutas{
 					++p;	
 					return *this;
 				}
-			       /**
-				* @brief  Operator -- de la clase const_iterator
-				*
-				* @return Devuelve el iterador retrasado
-				*/				
-				const_iterator & operator--(){
-					--p;
-					return *this;
-				}
+
 			       /**
 				* @brief  Operator * de la clase const_iterator
 				*
